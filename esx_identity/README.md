@@ -2,7 +2,7 @@
 FXServer ESX Identity (Modified Registration)
 By KrizFrost
 
-#Credits
+# Credits
 KrizFrost for development
 Luzox for assisting in code and designing mockup design
 [REQUIREMENTS]
