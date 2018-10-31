@@ -67,6 +67,7 @@ Citizen.CreateThread(function()
 
             DisableControlAction(0, 142, guiEnabled) -- MeleeAttackAlternate
             DisableControlAction(0, 18, guiEnabled) -- Enter
+            DisableControlAction(0, 322, guiEnabled) -- ESC
             DisableControlAction(0, 106, guiEnabled) -- VehicleMouseControlOverride
 
             if IsDisabledControlJustReleased(0, 142) then -- MeleeAttackAlternate

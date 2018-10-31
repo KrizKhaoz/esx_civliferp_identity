@@ -23,7 +23,7 @@ files({
   'html/new/images/bg.jpg',
   'html/new/images/bg1.jpg',
   'html/new/images/bg2.jpg',
-  'html/new/jquery-3.3.1.js',
+  'html/new/js/jquery-3.3.1.js',
 })
 
 exports {

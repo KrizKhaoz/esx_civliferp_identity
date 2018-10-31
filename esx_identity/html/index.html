@@ -1,13 +1,16 @@
+<!-- This Code Was Developed By KrizFrost of the FiveM Community For CivLife RP -->
 <html>
     <head>
         <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
         <link href="style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="css/master_style.css">
+
+
     </head>
-    <body>
+    <body >
         <img id="cursor" src="cursor.png">
         <div class="dialog">
-            <form id="register">
+           
         <div class="auth-2">
           </div>
           <!-- /.login-logo -->
@@ -17,7 +20,6 @@
 
         <img src="https://i.imgur.com/io4Vspk.png" height="130px" width="350px">
                 <!--  End Logo Image -->
-
 <!-- Subtitle -->
 <br>
 <!-- <font size="2px" color="red"><i>Do not press enter until you are satisfied with your identity</i></font><br>-->
@@ -25,22 +27,32 @@
 <!-- End Subtitle -->
 <!--- Register Form -->
 <!-- First Name -->
+ <form id="register">
+
 <b>First Name:</b><br><input id="firstname"  class="form-control" type="text" placeholder="First Name (Start With Capital Letter)"><br><br>
 <!-- End First Name -->
 <!-- Last Name -->
  <b>Last Name:</b><br><input id="lastname" type="text" class="form-control" placeholder="Last Name (Start With Capital Letter)"><br><br>
  <!-- End Last Name -->
  <!-- Date of Birth -->
-<b>Date of Birth:</b><br><input id="dateofbirth" type="text" class="form-control" placeholder="Date Of Birth (MM/DD/YYYY)" maxlength="10"><br><br>
+<b>Date of Birth:</b><br><input id="dateofbirth" type="text" class="form-control unstyled" placeholder="Date Of Birth" maxlength="10" oninput="maxLengthCheck(this)"><br><br>
  <!-- End Date of Birth -->
- <!-- Gender -->
-<b>Sex:</b><br><input id="sex" type="text" class="form-control" placeholder="Sex (M or F)" maxlength="1"><br><br>
- <!-- End Gender -->
   <!-- Height -->
-<b>Height:</b><br><input id="height" type="text" class="form-control" placeholder="Height (48-96)" maxlength="2"><br><br>
+<b>Height:</b><br><input id="height" type="number" min="0" step="1" min="48" max="96" maxlength = "2" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" class="form-control" placeholder="Height (48-96)" ><br><br>
 <b>Character Backstory:</b><br><input id="backstory" type="text" class="form-control" placeholder="Character Backstory (100 Character Minimum)" maxlength="9999"><br><br>
   <!-- End Height -->
+
+ <!-- Gender -->
+  <div class="checkbox">
+    <input type="checkbox" id="sex1" class="sex"  value="M">
+    <label for="sex1">Male</label> &nbsp;&nbsp;&nbsp;
+    <input type="checkbox" id="sex2" class="sex" value="F">
+    <label for="sex2">Female</label>
+  </div> 
+	<br><br>
+  <!-- End Gender -->
 <button id="submit" type="submit">Create Identity</button>
+ <form>
 <!--<hr>
             </center>
             <center><h1>Join Our Discord</h1></center>
@@ -53,8 +65,37 @@
              </center>
       </div>
         </div>
-            <form>
+           
         
+          <script src="new/js/jquery-3.3.1.js" type="text/javascript"></script>
         <script src="script.js" type="text/javascript"></script>
+        <script>
+          $('input[type="checkbox"]').on('change', function() {
+          $('input[type="checkbox"]').not(this).prop('checked', false);
+          });
+          function maxLengthCheck(object) {
+                  if (object.value.length > object.maxLength)
+                    object.value = object.value.slice(0, object.maxLength)
+                }
+                  
+                function isNumeric (evt) {
+                  var theEvent = evt || window.event;
+                  var key = theEvent.keyCode || theEvent.which;
+                  key = String.fromCharCode (key);
+                  var regex = /[0-9]|\./;
+                  if ( !regex.test(key) ) {
+                    theEvent.returnValue = false;
+                    if(theEvent.preventDefault) theEvent.preventDefault();
+                  }
+                }
+
+                dateInput.addEventListener('keydown', function(event) {
+                    if (event.keyIdentifier == "Down") {
+                        event.preventDefault()
+                    }
+                }, false);
+        </script>
+
     </body>
 </html>
+<!-- This Code Was Developed By KrizFrost of the FiveM Community For CivLife RP -->

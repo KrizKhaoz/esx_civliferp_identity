@@ -3,12 +3,34 @@
     src: url("../BarlowSemiCondensed-Regular.ttf");
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     overflow: hidden;
     display: none;
     font-color: white;
     color: #b5b7bf;
+    margin-top: -1px;
+   	
+}
+
+.no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.no-calendar::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
 #cursor {
@@ -21,7 +43,7 @@ body {
     width: 100%;
     position: absolute;
     left: 50%;
-    height: 100%;
+    height: 101%;
     transform: translateX(-50%);
     background-image: url(http://www.schrankmonster.de/wp-content/uploads/2015/05/8.jpg);
     background-size: cover;
@@ -730,6 +752,20 @@ input[type=text] {
 	text-align: center;
     font-color: #ffffff;
 }
+
+input[type=number] {
+    width: 100%;
+    text-align: center;
+    font-color: #ffffff;
+}
+
+
+input[type=date] {
+    width: 100%;
+    text-align: center;
+    font-color: #ffffff;
+}
+
 
 button {
     display: block;
