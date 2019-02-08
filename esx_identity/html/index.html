@@ -29,30 +29,31 @@
 <!-- First Name -->
  <form id="register">
 
-<b>First Name:</b><br><input id="firstname"  class="form-control" type="text" placeholder="First Name (Start With Capital Letter)"><br><br>
+<b>Imię:</b><br><input id="firstname"  class="form-control" type="text" placeholder="Imię (Rozpocznij z wielką literą)"><br><br>
 <!-- End First Name -->
 <!-- Last Name -->
- <b>Last Name:</b><br><input id="lastname" type="text" class="form-control" placeholder="Last Name (Start With Capital Letter)"><br><br>
+ <b>Nazwisko:</b><br><input id="lastname" type="text" class="form-control" placeholder="Nazwisko (Rozpocznij z wielką literą)"><br><br>
  <!-- End Last Name -->
  <!-- Date of Birth -->
-<b>Date of Birth:</b><br><input id="dateofbirth" type="text" class="form-control unstyled" placeholder="Date Of Birth" maxlength="10" oninput="maxLengthCheck(this)"><br><br>
+<b>Data urodzenia:</b><br><input id="dateofbirth" type="text" class="form-control unstyled" placeholder="Data urodzenia" maxlength="10" oninput="maxLengthCheck(this)"><br><br>
  <!-- End Date of Birth -->
   <!-- Height -->
-<b>Height:</b><br><input id="height" type="number" min="0" step="1" min="48" max="96" maxlength = "2" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" class="form-control" placeholder="Height (48-96)" ><br><br>
-<b>Character Backstory:</b><br><input id="backstory" type="text" class="form-control" placeholder="Character Backstory (100 Character Minimum)" maxlength="9999"><br><br>
+<b>Wysokość:</b><br><input id="height" type="number" min="0" step="1" min="48" max="96" maxlength = "2" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" class="form-control" placeholder="Wysokość (48-96)" ><br><br>
+<b>Backstory postaci:</b><br><input id="backstory" type="text" class="form-control" placeholder="Backstory postaci (minimum 100 postaci)" maxlength="9999"><br><br>
   <!-- End Height -->
 
  <!-- Gender -->
   <div class="checkbox">
     <input type="checkbox" id="sex1" class="sex"  value="M">
-    <label for="sex1">Male</label> &nbsp;&nbsp;&nbsp;
+    <label for="sex1">Męski</label> &nbsp;&nbsp;&nbsp;
     <input type="checkbox" id="sex2" class="sex" value="F">
-    <label for="sex2">Female</label>
+    <label for="sex2">Płeć żeńska</label>
   </div> 
 	<br><br>
   <!-- End Gender -->
-<button id="submit" type="submit">Create Identity</button>
+<button id="submit" type="submit">Stwórz tożsamość</button>
  <form>
+   <!-- Polish Version 
 <!--<hr>
             </center>
             <center><h1>Join Our Discord</h1></center>
